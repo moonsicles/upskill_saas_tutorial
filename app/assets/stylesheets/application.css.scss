@@ -49,6 +49,17 @@ nav.navbar {
   font-weight: 800;
 }
 
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: rgb(255,255,255);
+}
+
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+    background-color: #ffd89b;
+  }
+}
+
 // Homepage styles
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
