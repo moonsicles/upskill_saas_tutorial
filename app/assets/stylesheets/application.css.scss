@@ -17,10 +17,12 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+//Typography styles
 h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
 }
 
+//Background gradient
 .navbar, .home-callout {
   /*Gradient Provided by uigradients.com*/
   background: #ffd89b; /* fallback for old browsers */
@@ -28,6 +30,7 @@ h1, h2, h3 {
   background: linear-gradient(to left, #ffd89b , #19547b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+// Nav styles
 nav.navbar {
   border: none;
 }
@@ -38,10 +41,11 @@ nav.navbar {
   padding: 50px 0 100px;
 }
 
-.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
-  color: white;
-}
-
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
-  color: rgba(255, 255, 255, 0.75);
+// Homepage styles
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: rgb(255,255,255);
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
 }
