@@ -1,11 +1,11 @@
 class ProfilesController < ApplicationController
-  # GET to users/:user_id/profile/new
+  # GET requests to users/:user_id/profile/new
   def new
    # render a blank profile details form 
    @profile = Profile.new
   end
   
-  #POST request to /users/:user_id/profile
+  #POST requests to /users/:user_id/profile
   def create
     # Ensure we have the user who is filling out form
     @user = User.find( params[:user_id] )
@@ -18,6 +18,12 @@ class ProfilesController < ApplicationController
     else
       render action: new
     end
+  end
+  
+  # GET requests to users/:user_id/profile/edit
+  def edit
+    @user = User.find( params[:user_id] )
+    @profile = @user.profile
   end
   
   private
